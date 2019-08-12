@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+  main:
+    banner-mode: "off"
+---
+cloudkafka_username: x7bcsrrj
+cloudkafka_password: VWd2vwU5xLKVFkIwbJ5GYbfffb-VvRMM
+spring:
+  profiles: local
+  kafka:
+    bootstrap-servers: velomobile-01.srvs.cloudkafka.com:9094,velomobile-02.srvs.cloudkafka.com:9094,velomobile-03.srvs.cloudkafka.com:9094
+    topic: ${cloudkafka_username}-default
+    sasl-mechanism: SCRAM-SHA-256
+    sasl-jaas-config: org.apache.kafka.common.security.scram.ScramLoginModule required username="${cloudkafka_username}" password="${cloudkafka_password}";
+    security-protocol: SASL_SSL
+
+logging:
+  level:
+    root: info
+
+
