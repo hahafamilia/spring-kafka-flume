@@ -6,7 +6,7 @@ Flume Hdfs sink 는 `useLocalTimestamp` 를 제공하고 있지만, 이것은 �
 
 1. 2019-08-01 23:59:59, 이벤트가 발생, API 로 전송
 1. 2019-08-02 00:00:00, API 서버는 Kafka 로 Produce
-1. 2019-08-02 00:00:01, Flume 은 Kafka source, Hdfs sink 를 통해 Hdfs 디렉토리에 적제
+1. 2019-08-02 00:00:01, Flume 은 Kafka source, Hdfs sink 를 통해 Hdfs 디렉토리에 저장
 
 Hdfs Sink 가 데이터를 일자별로 파티션 하여 적재 한다면, `useLocalTimestamp` 는 2019-08-02 디렉토리에 데이터를 적재합니다. 
 AvroFlumeEvent 클래스를 통해 헤더에 Timestamp 값을 저장하고 Flume 에서 이 헤더의 Timestamp 값을 기준으로 저장한다면 데이터는 2019-08-01 디렉토리에 저장되게 됩니다.
@@ -47,7 +47,6 @@ tier1.sinks.sink1.hdfs.path = /etl/flume/activity-event/ymd=%Y-%m-%d
 ```
 
 ### Reference Documentation
-[Toast Meetup! Spring Boot Test](https://meetup.toast.com/posts/124) 
 
 [How to Extract Event Time in Apache Flume](http://shzhangji.com/blog/2017/08/05/how-to-extract-event-time-in-apache-flume/)
 
