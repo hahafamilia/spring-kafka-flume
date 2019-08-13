@@ -52,3 +52,4 @@ tier1.sinks.sink1.hdfs.path = /etl/flume/activity-event/ymd=%Y-%m-%d
 
 
 
+
