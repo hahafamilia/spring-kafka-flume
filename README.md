@@ -50,4 +50,3 @@ tier1.sinks.sink1.hdfs.path = /etl/flume/activity-event/ymd=%Y-%m-%d
 
 [How to Extract Event Time in Apache Flume](http://shzhangji.com/blog/2017/08/05/how-to-extract-event-time-in-apache-flume/)
 
-
