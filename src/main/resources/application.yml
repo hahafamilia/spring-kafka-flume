@@ -4,8 +4,8 @@ spring:
   main:
     banner-mode: "off"
 ---
-cloudkafka_username: x7bcsrrj
-cloudkafka_password: VWd2vwU5xLKVFkIwbJ5GYbfffb-VvRMM
+cloudkafka_username: <username>
+cloudkafka_password: <password>
 spring:
   profiles: local
   kafka:
